@@ -12,7 +12,7 @@ PVE & PVP rpg turn-based gameplay website
     -[] Game Menu Screen
 
 - [] Game Mode
-    -[] Player vs Environment Battle
+    -[] Player vs CPU Battle
 
 - [] Character
     -[] Character 

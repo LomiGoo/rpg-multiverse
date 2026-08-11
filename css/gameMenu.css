@@ -1,18 +1,8 @@
-body {
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100dvh;
-}
-
 #gameMenuScreen {
     display: flex;
     flex-direction: column;
     gap: 60px;
     align-items: center;
-   
 }
 
 #gameMenuScreen button {
@@ -33,3 +23,4 @@ body {
     gap: 500px;
     font-size: 15px;
 }
+

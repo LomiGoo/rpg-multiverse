@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="/css/body.css">
+    <link rel="stylesheet" href="/css/gameMenu.css">
+    <link rel="stylesheet" href="/css/gameModes.css">
     <title> RPG Multiverse </title>
 </head>
 <body>
@@ -18,6 +20,14 @@
             <p> Version : 0.1.0 Alpha </p>
         </div>
     </div>
-<script src="script.js"></script>
+
+    <div id="gameModesScreen">
+        <h1> SELECT GAME MODE </h1>
+        <button id="pveBtn"> Player vs CPU </button>
+        <button id="pvpBtn"> Player vs Player (Locked) </button>
+        <button id="backBtn"> Back </button>
+    </div>
+<script src="/js/gameMenu.js"></script>
+<script src="/js/gameModes.js"></script>
 </body>
 </html>
