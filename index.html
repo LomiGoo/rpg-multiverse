@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/gameMenu.css">
     <link rel="stylesheet" href="/css/gameModes.css">
     <link rel="stylesheet" href="/css/characterSelection.css">
+    <link rel="stylesheet" href="/css/combatTurn.css">
     <title> RPG Multiverse </title>
 </head>
 
@@ -91,7 +92,12 @@
         </div>
     </div>
 
-    
+    <div id="combatTurnScreen">
+        <h1> SELECT COMBAT TURN STYLE </h1>
+        <button id="rpsStyleBtn"> Rock-Paper-Scissor (Blunt, Wrap, Cut) </button>
+        <button id="coinBetBtn"> Coin Bet (Locked) </button>
+        <button id="backBtn3"> Back </button>
+    </div>
 
 
 <!--
@@ -110,6 +116,7 @@
     <script src="/js/gameMenu.js"></script>
     <script src="/js/gameModes.js"></script>
     <script src="/js/characterSelection.js"></script>
+    <script src="/js/combatTurn.js"></script>
     <script>
         document.getElementById("fsBtn").addEventListener("click", () => {
             document.documentElement.requestFullscreen();
