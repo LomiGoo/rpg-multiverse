@@ -8,11 +8,11 @@ PVE & PVP rpg turn-based gameplay website
 
 ### Must Have
 
-- [] UI
-    -[] Game Menu Screen
+- [x] UI
+    -[x] Game Menu Screen
 
-- [] Game Mode
-    -[] Player vs CPU Battle
+- [x] Game Mode
+    -[x] Player vs CPU Battle
 
 - [] Character
     -[] Character 

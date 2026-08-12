@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/body.css">
     <link rel="stylesheet" href="/css/gameMenu.css">
     <link rel="stylesheet" href="/css/gameModes.css">
+    <link rel="stylesheet" href="/css/characterSelection.css">
     <title> RPG Multiverse </title>
 </head>
+
 <body>
     <div id="gameMenuScreen">
         <h1> RPG MULTIVERSE </h1>
-        <button id="playBtn"> PLAY </button>   
+        <button id="playBtn"> PLAY </button>
         <div id="footer">
             <a href="https://github.com/LomiGoo">
                 <img src="/images/github-logo.png" alt="Github Logo" style="width: 30px;">
@@ -23,11 +26,96 @@
 
     <div id="gameModesScreen">
         <h1> SELECT GAME MODE </h1>
-        <button id="pveBtn"> Player vs CPU </button>
+        <button id="pvcBtn"> Player vs CPU </button>
         <button id="pvpBtn"> Player vs Player (Locked) </button>
         <button id="backBtn"> Back </button>
     </div>
-<script src="/js/gameMenu.js"></script>
-<script src="/js/gameModes.js"></script>
+
+    <div id="characterSelection">
+        <div id="charInfo">
+            <img src="https://i.pinimg.com/1200x/e0/72/62/e0726218a8cf69c05ad3d0304b278275.jpg" alt="characterImage">
+            <div class="container" id="charDescription">
+                <h4> DESCRIPTION </h4>
+                <p>
+                    Joker is the protagonist of Persona 5 and the leader of the Phantom Thieves.
+                </p>
+                <p>
+                    He can use multiple Personas and fights to change the hearts of corrupt people in society.
+                </p>
+            </div>
+        </div>
+        <div id="attributes">
+            <div id="stats">
+                <div class="container" id="charName" style="font-weight: bold;"> Joker </div>
+                <hr>
+                <div class="container" id="attackStat"> Attack : ---- </div>
+                <div class="container" id="defenseStat"> Defense : ---- </div>
+            </div>
+            <hr>
+            <div id="skills">
+                <div class="container" id="firstSkill"> 1st Skill : Gun </div>
+                <div class="container" id="secondSkill"> 2nd Skill : Agidyne </div>
+                <div class="container" id="thirdSkill"> 3rd Skill : Heavy Slash </div>
+                <hr>
+                <div class="container" id="ultimateSkill"> Persona : Arsene </div>
+            </div>
+        </div>
+        <div id="rosterDisplay">
+            <h3> SELECT YOUR CHARACTER </h3>
+            <div id="roster">
+                <div class="container"></div>
+                <div class="container"></div>
+                <div class="container"></div>
+                <div class="container"></div>
+                <div class="container"></div>
+                <div class="container"></div>
+                <div class="container"></div>
+                <div class="container"></div>
+                <div class="container"></div>
+                <div class="container"></div>
+                <div class="container"></div>
+                <div class="container"></div>
+                <div class="container"></div>
+                <div class="container"></div>
+                <div class="container"></div>
+                <div class="container"></div>
+                <div class="container"></div>
+                <div class="container"></div>
+                <div class="container"></div>
+                <div class="container"></div>
+            </div>
+        </div>
+        <div id="actionButtons">
+            <button class="action" id="backBtn2"> Back </button>
+            <button class="action" id="nextBtn"> Next </button>
+        </div>
+    </div>
+
+    
+
+
+<!--
+    <div id="fsPrompt" style="
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0.85); display: flex;
+        align-items: center; justify-content: center; z-index: 999;">
+        <div style="text-align: center; color: white;">
+            <p>Click to enter fullscreen</p>
+            <button id="fsBtn" style="padding: 10px 24px; font-size: 16px;">Enter</button>
+        </div>
+    </div>
+-->
+    
+    <script src="/js/body.js"></script>
+    <script src="/js/gameMenu.js"></script>
+    <script src="/js/gameModes.js"></script>
+    <script src="/js/characterSelection.js"></script>
+    <script>
+        document.getElementById("fsBtn").addEventListener("click", () => {
+            document.documentElement.requestFullscreen();
+            document.getElementById("fsPrompt").remove(); // hide the popup after
+        });
+    </script>
 </body>
+
 </html>

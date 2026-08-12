@@ -1,22 +1,6 @@
 const playBtn = document.getElementById('playBtn')
 
-function fullscreen() {
-    document.documentElement.requestFullscreen()
-}
-
-function showScreen(screenName) {
-    document.querySelector('#' + screenName).style.display = 'flex'
-}
-
-function hideScreen(screenName) {
-    document.querySelector('#' + screenName).style.display = 'none'
-}
-
-function handleDisplayClick() {
+playBtn.addEventListener("click", () => {
     fullscreen()
-    hideScreen('gameMenuScreen')
-    showScreen('gameModesScreen')
-    
-}
-
-playBtn.addEventListener("click", handleDisplayClick)
+    handleDisplayClick('gameMenuScreen', 'gameModesScreen')
+})

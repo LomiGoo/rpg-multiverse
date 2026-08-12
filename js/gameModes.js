@@ -1,21 +1,11 @@
 const backBtn = document.getElementById('backBtn')
+const pvcBtn = document.getElementById('pvcBtn')
 
-function exitFullscreen() {
-    document.exitFullscreen()
-}
-
-function showScreen(screenName) {
-    document.querySelector('#' + screenName).style.display = 'flex'
-}
-
-function hideScreen(screenName) {
-    document.querySelector('#' + screenName).style.display = 'none'
-}
-
-function handleDisplayClick() {
+backBtn.addEventListener("click", () => {
     exitFullscreen()
-    hideScreen('gameModesScreen')
-    showScreen('gameMenuScreen')
-}
+    handleDisplayClick('gameModesScreen', 'gameMenuScreen')
+})
 
-backBtn.addEventListener("click", handleDisplayClick)
+pvcBtn.addEventListener('click', () => {
+    handleDisplayClick('gameModesScreen', 'characterSelection')
+})
