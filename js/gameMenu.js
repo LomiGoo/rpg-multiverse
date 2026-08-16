@@ -1,6 +1,6 @@
 const playBtn = document.getElementById('playBtn')
 
-playBtn.addEventListener("click", () => {
+playBtn.addEventListener('click', () => {
     fullscreen()
     handleDisplayClick('gameMenuScreen', 'gameModesScreen')
 })

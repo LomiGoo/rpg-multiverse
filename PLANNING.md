@@ -28,7 +28,7 @@ PVE & PVP rpg turn-based gameplay website
     -[] Tie rule: both receive fixed damage
 
 - [] Battle System
-    -[] HP Bar
+    -[] HP text
 
 - [] Actions
     -[] Attack Action
@@ -50,6 +50,9 @@ PVE & PVP rpg turn-based gameplay website
 ### Should Have
 
 ### Could Have
+- [] Battle System
+    -[] HP bar
+
 - [] Audio/Visual
     -[] Battle Music
     -[] Attack/Skill Effects
