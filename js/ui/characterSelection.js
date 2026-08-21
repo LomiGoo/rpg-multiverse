@@ -8,3 +8,4 @@ backBtn2.addEventListener('click', () => {
 nextBtn.addEventListener('click', () => {
     handleDisplayClick('characterSelection', 'combatTurnScreen')
 })
+
