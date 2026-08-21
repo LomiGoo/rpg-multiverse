@@ -1,0 +1,102 @@
+#battlefield {
+    display: none;
+    flex-direction: column;
+}
+
+hr {
+    display: block;      
+    border: none;      
+    height: 1px;         
+    background-color: #0000001f;
+    width: 100%;         
+}
+
+#topBar {
+    display: flex;
+    flex-direction: row;
+    gap: 180px;
+    align-items: center;
+    
+}
+
+#player1 {
+    display: flex;
+    gap: 5px;
+}
+
+#playerChar1 {
+    width: 70px;
+    height: 67px;
+    padding-top: 7px;
+}
+
+#player2 {
+    display: flex;
+    gap: 5px;
+}
+
+#playerChar2 {
+    width: 70px;
+    height: 67px;
+    padding-top: 7px;
+}
+
+#player1Info p {
+    text-align: start;
+}
+
+#player2Info p {
+    text-align: end;
+}
+
+#battleStatus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#bottomBar {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+  padding: 20px;
+}
+
+#versusDisplay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#versusDisplay img {
+    width: 80px;
+    height: 60px;
+}
+
+#battleActions {
+    display: flex;
+    gap: 100px;
+}
+
+#turnDecisions {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#turnDecisions img {
+    width: 40px;
+}
+
+#battleDecisions {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#battleDecisions img {
+    width: 40px;
+}

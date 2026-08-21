@@ -1,0 +1,26 @@
+#gameMenuScreen {
+    display: none;
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+}
+
+#gameMenuScreen button {
+    padding: 20px;
+    font-size: 20px;
+    width: 35%;
+}
+
+#gameMenuScreen a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+}
+
+#footer {
+    display: flex;
+    gap: 500px;
+    font-size: 15px;
+}
+

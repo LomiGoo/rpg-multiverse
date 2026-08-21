@@ -1,0 +1,17 @@
+#gameModesScreen {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#gameModesScreen button {
+    font-size: 20px;
+    padding: 10px;
+}
+
+#pvpBtn {
+   pointer-events: none;
+   opacity: 0.5;
+   cursor: not-allowed;
+   user-select: none;
+}

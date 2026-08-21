@@ -8,11 +8,11 @@ PVE & PVP rpg turn-based gameplay website
 
 ### Must Have
 
-- [] UI
-    -[] Game Menu Screen
+- [x] UI
+    -[x] Game Menu Screen
 
-- [] Game Mode
-    -[] Player vs Environment Battle
+- [x] Game Mode
+    -[x] Player vs CPU Battle
 
 - [] Character
     -[] Character 
@@ -24,11 +24,11 @@ PVE & PVP rpg turn-based gameplay website
     -[] Defense Stats
 
 - [] Combat Turn Styles
-    -[] Core Rock-Paper-Scissor Style (Blunt, Slam, Cut) logic
+    -[] Core Rock-Paper-Scissor Style (Blunt, Wrap, Cut) logic
     -[] Tie rule: both receive fixed damage
 
 - [] Battle System
-    -[] HP Bar
+    -[] HP text
 
 - [] Actions
     -[] Attack Action
@@ -50,6 +50,9 @@ PVE & PVP rpg turn-based gameplay website
 ### Should Have
 
 ### Could Have
+- [] Battle System
+    -[] HP bar
+
 - [] Audio/Visual
     -[] Battle Music
     -[] Attack/Skill Effects
