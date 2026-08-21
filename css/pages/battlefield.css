@@ -1,5 +1,5 @@
 #battlefield {
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
@@ -11,7 +11,7 @@ hr {
     width: 100%;         
 }
 
-#battlefield #topBar {
+#topBar {
     display: flex;
     flex-direction: row;
     gap: 180px;
@@ -19,23 +19,23 @@ hr {
     
 }
 
-#topBar #player1 {
+#player1 {
     display: flex;
     gap: 5px;
 }
 
-#topBar #playerChar1 {
+#playerChar1 {
     width: 70px;
     height: 67px;
     padding-top: 7px;
 }
 
-#topBar #player2 {
+#player2 {
     display: flex;
     gap: 5px;
 }
 
-#topBar #playerChar2 {
+#playerChar2 {
     width: 70px;
     height: 67px;
     padding-top: 7px;
@@ -56,7 +56,7 @@ hr {
     justify-content: center;
 }
 
-#battlefield #bottomBar {
+#bottomBar {
    display: flex;
    justify-content: center;
    align-items: center;
@@ -64,7 +64,7 @@ hr {
   padding: 20px;
 }
 
-#bottomBar #versusDisplay {
+#versusDisplay {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,7 +81,7 @@ hr {
     gap: 100px;
 }
 
-#battleActions #turnDecisions {
+#turnDecisions {
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -91,7 +91,7 @@ hr {
     width: 40px;
 }
 
-#battleActions #battleDecisions {
+#battleDecisions {
     display: flex;
     flex-direction: row;
     gap: 10px;

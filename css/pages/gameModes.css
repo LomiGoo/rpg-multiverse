@@ -9,7 +9,7 @@
     padding: 10px;
 }
 
-#gameModesScreen #pvpBtn {
+#pvpBtn {
    pointer-events: none;
    opacity: 0.5;
    cursor: not-allowed;

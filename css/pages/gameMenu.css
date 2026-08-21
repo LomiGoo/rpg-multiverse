@@ -18,7 +18,7 @@
     text-decoration: none;
 }
 
-#gameMenuScreen #footer {
+#footer {
     display: flex;
     gap: 500px;
     font-size: 15px;
