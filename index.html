@@ -5,30 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/body.css">
-    <link rel="stylesheet" href="/css/gameMenu.css">
-    <link rel="stylesheet" href="/css/gameModes.css">
-    <link rel="stylesheet" href="/css/characterSelection.css">
-    <title> RPG Multiverse </title>
+    <link rel="stylesheet" href="/css/pages/gameMenu.css">
+    <link rel="stylesheet" href="/css/pages/gameModes.css">
+    <link rel="stylesheet" href="/css/pages/characterSelection.css">
+    <link rel="stylesheet" href="/css/pages/combatTurn.css">
+    <link rel="stylesheet" href="/css/pages/battlefield.css">
+    <title>RPG Multiverse</title>
 </head>
 
 <body>
     <div id="gameMenuScreen">
-        <h1> RPG MULTIVERSE </h1>
-        <button id="playBtn"> PLAY </button>
+        <h1>RPG MULTIVERSE</h1>
+        <button id="playBtn">PLAY</button>
         <div id="footer">
             <a href="https://github.com/LomiGoo">
                 <img src="/images/github-logo.png" alt="Github Logo" style="width: 30px;">
-                <span> @LomiGooTakes </span>
+                <span>@LomiGooTakes</span>
             </a>
-            <p> Version : 0.1.0 Alpha </p>
+            <p>Version: 0.1.0 Alpha</p>
         </div>
     </div>
 
     <div id="gameModesScreen">
-        <h1> SELECT GAME MODE </h1>
-        <button id="pvcBtn"> Player vs CPU </button>
-        <button id="pvpBtn"> Player vs Player (Locked) </button>
-        <button id="backBtn"> Back </button>
+        <h1>SELECT GAME MODE</h1>
+        <button id="pvcBtn">Player vs CPU</button>
+        <button id="pvpBtn">Player vs Player (Locked)</button>
+        <button id="backBtn">Back</button>
     </div>
 
     <div id="characterSelection">
@@ -46,55 +48,106 @@
         </div>
         <div id="attributes">
             <div id="stats">
-                <div class="container" id="charName" style="font-weight: bold;"> Joker </div>
+                <div class="container" id="charName" style="font-weight: bold;">Joker</div>
                 <hr>
-                <div class="container" id="attackStat"> Attack : ---- </div>
-                <div class="container" id="defenseStat"> Defense : ---- </div>
+                <div class="container" id="attackStat">Attack: ----</div>
+                <div class="container" id="defenseStat">Defense: ----</div>
             </div>
             <hr>
             <div id="skills">
-                <div class="container" id="firstSkill"> 1st Skill : Gun </div>
-                <div class="container" id="secondSkill"> 2nd Skill : Agidyne </div>
-                <div class="container" id="thirdSkill"> 3rd Skill : Heavy Slash </div>
+                <div class="container" id="firstSkill">1st Skill: Gun</div>
+                <div class="container" id="secondSkill">2nd Skill: Agidyne</div>
+                <div class="container" id="thirdSkill">3rd Skill: Heavy Slash</div>
                 <hr>
-                <div class="container" id="ultimateSkill"> Persona : Arsene </div>
+                <div class="container" id="ultimateSkill">Persona: Arsene</div>
             </div>
         </div>
         <div id="rosterDisplay">
-            <h3> SELECT YOUR CHARACTER </h3>
+            <h3>SELECT YOUR CHARACTER</h3>
             <div id="roster">
-                <div class="container"></div>
-                <div class="container"></div>
-                <div class="container"></div>
-                <div class="container"></div>
-                <div class="container"></div>
-                <div class="container"></div>
-                <div class="container"></div>
-                <div class="container"></div>
-                <div class="container"></div>
-                <div class="container"></div>
-                <div class="container"></div>
-                <div class="container"></div>
-                <div class="container"></div>
-                <div class="container"></div>
-                <div class="container"></div>
-                <div class="container"></div>
-                <div class="container"></div>
-                <div class="container"></div>
-                <div class="container"></div>
                 <div class="container"></div>
             </div>
         </div>
         <div id="actionButtons">
-            <button class="action" id="backBtn2"> Back </button>
-            <button class="action" id="nextBtn"> Next </button>
+            <button class="action" id="backBtn2">Back</button>
+            <button class="action" id="nextBtn">Next</button>
         </div>
     </div>
 
-    
+    <div id="combatTurnScreen">
+        <h1>SELECT COMBAT TURN STYLE</h1>
+        <button id="rpsStyleBtn">Rock-Paper-Scissor (Blunt, Wrap, Cut)</button>
+        <button id="coinBetBtn">Coin Bet (Locked)</button>
+        <button id="backBtn3">Back</button>
+    </div>
+
+    <div id="battlefield">
+        <div id="topBar">
+            <div id="player1">
+                <img id="playerChar1" src="https://i.pinimg.com/1200x/e0/72/62/e0726218a8cf69c05ad3d0304b278275.jpg" alt="player1 Image">
+                <div id="player1Info">
+                    <p>User (Joker)</p>
+                    <p>HP: ---- / ----</p>
+                </div>
+            </div>
+
+            <p id="playerTurn">PLAYER # TURN</p>
+
+            <div id="player2">
+                <div id="player2Info">
+                    <p>(Joker) User</p>
+                    <p>---- / ---- : HP</p>
+                </div>
+                <img id="playerChar2" src="https://i.pinimg.com/1200x/e0/72/62/e0726218a8cf69c05ad3d0304b278275.jpg" alt="player2 Image">
+            </div>
+        </div>
+        <hr>
+        <div id="bottomBar">
+            <div id="versusDisplay">
+                <img src="/images/question.png" alt="">
+                <p>VS</p>
+                <img src="/images/question.png" alt="">
+            </div>
+
+            <p>RESULT : PLAYER # WINS!</p>
+            <hr>
+
+            <div id="battleActions">
+                <div id="turnDecisions">
+                    <button>
+                        <img src="/images/question.png" alt="">
+                    </button>
+                    <button>
+                        <img src="/images/question.png" alt="">
+                    </button>
+                    <button>
+                        <img src="/images/question.png" alt="">
+                    </button>
+                </div>
+
+                <div id="battleDecisions">
+                   <button>
+                        ATTACK
+                    </button>
+                    <button>
+                        DEFEND
+                    </button>
+                    <button>
+                        SKILLS
+                    </button>
+                    <button>
+                        ULTIMATE
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+// TODO : APPLY FUNCTION ON CHAR SELECT
 
 
-<!--
+
+    <--
     <div id="fsPrompt" style="
         position: fixed; top: 0; left: 0; width: 100%; height: 100%;
         background: rgba(0,0,0,0.85); display: flex;
@@ -104,17 +157,17 @@
             <button id="fsBtn" style="padding: 10px 24px; font-size: 16px;">Enter</button>
         </div>
     </div>
--->
-    
-    <script src="/js/body.js"></script>
-    <script src="/js/gameMenu.js"></script>
-    <script src="/js/gameModes.js"></script>
-    <script src="/js/characterSelection.js"></script>
+    -->
+    <script src="/js/ui/screenManager.js"></script>
+    <script src="/js/ui/gameMenu.js"></script>
+    <script src="/js/ui/gameModes.js"></script>
+    <script src="/js/ui/characterSelection.js"></script>
+    <script src="/js/ui/combatTurn.js"></script>
     <script>
-        document.getElementById("fsBtn").addEventListener("click", () => {
-            document.documentElement.requestFullscreen();
-            document.getElementById("fsPrompt").remove(); // hide the popup after
-        });
+        document.getElementById('fsBtn').addEventListener('click', () => {
+            document.documentElement.requestFullscreen()
+            document.getElementById('fsPrompt').remove()
+        })
     </script>
 </body>
 

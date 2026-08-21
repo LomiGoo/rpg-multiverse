@@ -16,5 +16,5 @@ function exitFullscreen() {
 
 function handleDisplayClick(hide, show) {
     hideScreen(hide)
-    showScreen(show)  
+    showScreen(show)
 }

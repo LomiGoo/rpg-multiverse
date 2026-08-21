@@ -1,5 +1,5 @@
 #gameMenuScreen {
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 60px;
     align-items: center;
@@ -18,7 +18,7 @@
     text-decoration: none;
 }
 
-#gameMenuScreen #footer {
+#footer {
     display: flex;
     gap: 500px;
     font-size: 15px;

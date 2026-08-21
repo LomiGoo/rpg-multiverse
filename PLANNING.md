@@ -24,11 +24,11 @@ PVE & PVP rpg turn-based gameplay website
     -[] Defense Stats
 
 - [] Combat Turn Styles
-    -[] Core Rock-Paper-Scissor Style (Blunt, Slam, Cut) logic
+    -[] Core Rock-Paper-Scissor Style (Blunt, Wrap, Cut) logic
     -[] Tie rule: both receive fixed damage
 
 - [] Battle System
-    -[] HP Bar
+    -[] HP text
 
 - [] Actions
     -[] Attack Action
@@ -50,6 +50,9 @@ PVE & PVP rpg turn-based gameplay website
 ### Should Have
 
 ### Could Have
+- [] Battle System
+    -[] HP bar
+
 - [] Audio/Visual
     -[] Battle Music
     -[] Attack/Skill Effects
