@@ -28,28 +28,22 @@
 
     <div id="gameModesScreen">
         <h1>SELECT GAME MODE</h1>
-        <button id="pvcBtn">Player vs CPU</button>
+        <button id="pvcBtn" onclick="populateCharacters()">Player vs CPU</button>
         <button id="pvpBtn">Player vs Player (Locked)</button>
         <button id="backBtn">Back</button>
     </div>
 
     <div id="characterSelection">
         <div id="charInfo">
-            <img src="https://i.pinimg.com/1200x/e0/72/62/e0726218a8cf69c05ad3d0304b278275.jpg" alt="characterImage">
+            <img src="" alt="">
             <div class="container" id="charDescription">
-                <h4> DESCRIPTION </h4>
-                <p>
-                    Joker is the protagonist of Persona 5 and the leader of the Phantom Thieves.
-                </p>
-                <p>
-                    He can use multiple Personas and fights to change the hearts of corrupt people in society.
-                </p>
+                <p></p>
             </div>
         </div>
 
         <div id="attributes">
             <div id="stats">
-                <div class="container" id="charName" style="font-weight: bold;">Joker</div>
+                <div class="container" id="charName" style="font-weight: bold; text-align: center;">Joker</div>
                 <hr>
                 <div class="container" id="attackStat">Attack: ----</div>
                 <div class="container" id="defenseStat">Defense: ----</div>
@@ -57,18 +51,18 @@
             <hr>
 
             <div id="skills">
-                <div class="container" id="firstSkill">1st Skill: Gun</div>
-                <div class="container" id="secondSkill">2nd Skill: Agidyne</div>
-                <div class="container" id="thirdSkill">3rd Skill: Heavy Slash</div>
+                <div class="container" id="firstSkill">1st Skill: ???</div>
+                <div class="container" id="secondSkill">2nd Skill: ???</div>
+                <div class="container" id="thirdSkill">3rd Skill: ???</div>
                 <hr>
-                <div class="container" id="ultimateSkill">Persona: Arsene</div>
+                <div class="container" id="ultimateSkill">???</div>
             </div>
         </div>
 
         <div id="rosterDisplay">
             <h3>SELECT YOUR CHARACTER</h3>
             <div id="roster">
-                <div class="container"></div>
+                
             </div>
         </div>
 
@@ -155,6 +149,7 @@
     <script src="/js/ui/gameMenu.js"></script>
     <script src="/js/ui/gameModes.js"></script>
     <script src="/js/ui/characterSelection.js"></script>
+    <script src="/js/data/characters.js"></script>
     <script src="/js/ui/combatTurn.js"></script>
     <script>
         document.getElementById('fsBtn').addEventListener('click', () => {

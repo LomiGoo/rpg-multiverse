@@ -4,11 +4,11 @@
 }
 
 hr {
-    display: block;      
-    border: none;      
-    height: 1px;         
+    display: block;
+    border: none;
+    height: 1px;
     background-color: #0000001f;
-    width: 100%;         
+    width: 100%;
 }
 
 #topBar {
@@ -16,7 +16,6 @@ hr {
     flex-direction: row;
     gap: 180px;
     align-items: center;
-    
 }
 
 #player1 {
@@ -57,11 +56,11 @@ hr {
 }
 
 #bottomBar {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-  padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
 }
 
 #versusDisplay {
