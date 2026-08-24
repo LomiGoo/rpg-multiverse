@@ -7,37 +7,51 @@ A turn-based RPG web game featuring characters from various universes battling i
 
 ## MVP Features
 
-### Completed
+### UI
 - [x] Main Menu Screen (Play button and fullscreen toggle)
-- [x] Game Mode Selection Screen (Player vs CPU mode)
+- [x] Game Mode Selection Screen
 - [x] Character Selection Screen (Roster display, portraits, descriptions, stats)
 - [x] Turn Selection Screen (Combat turn style choice)
 - [x] Starting Round Screen (Versus matchup display and countdown timer)
-- [x] Character roster data (Joker, Rimuru, Regulus)
-- [x] Player data structures (Base HP 5000, Attack, Defense, Skills)
-- [x] CPU opponent randomizer
+- [ ] Battlefield Screen (Live HP text display, character portraits, turn indicator)
+- [ ] Game Over Banner (Winner and loser announcement, play again button)
 
-### To Be Built
-- [ ] Battlefield Screen UI (Live HP display, character info, turn indicator)
-- [ ] Combat Turn System (Rock-Paper-Scissors initiative selection and tie rule)
-- [ ] Battle Actions (Attack, Defend, Skill buttons)
-- [ ] Skill Cooldown System (Tracking turns until skills can be used again)
-- [ ] Damage Calculation (Attack vs Defense formulas and damage reduction)
-- [ ] CPU Combat AI (Randomized RPS and action selection)
-- [ ] Game Over State (0 HP detection, winner/loser announcement, play again)
+### Logic
+- [x] Screen switching and navigation management
+- [x] Fullscreen enter and exit controls
+- [x] CPU opponent randomizer on character selection
+- [x] Starting round countdown timer
+- [ ] Rock-Paper-Scissors turn initiative resolution and tie rule
+- [ ] Combat action handling (Attack, Defend, Skill buttons)
+- [ ] Damage calculations (Attack vs Defense formulas and damage reduction)
+- [ ] Skill cooldown management (Track turns until usable again)
+- [ ] CPU combat decision making (Randomized RPS and action selection)
+- [ ] Game state and Win/Lose detection (0 HP check)
+
+### Data
+- [x] Character roster dataset (Joker, Rimuru, Regulus stats and skills)
+- [x] Player state models (Base HP 5000, Attack, Defense, Skill definitions)
+- [x] Game mode state tracking (Player vs CPU)
+- [ ] Live combat state (Current HP, active turn, turn count, cooldown counters)
 
 ---
 
 ## Future Features
 
-- [ ] Animated visual HP bar
-- [ ] Ultimate skill action and turn 6 unlock cooldown
-- [ ] Ultimate damage calculation and special effects
-- [ ] Coin Bet combat turn style
+### UI
+- [ ] Animated visual HP bars
+- [ ] Special visual effects for skills and ultimates
 - [ ] Sound effects and background music
+
+### Logic
+- [ ] Ultimate skill execution and turn 6 unlock cooldown
+- [ ] Coin Bet combat turn initiative system
+- [ ] Ultimate damage calculation
 - [ ] Player vs Player (PvP) mode
-- [ ] User accounts and authentication
-- [ ] Progression system and leaderboards
+
+### Data
+- [ ] User accounts and authentication data
+- [ ] Progression system and leaderboard records
 
 ---
 
@@ -52,4 +66,5 @@ A turn-based RPG web game featuring characters from various universes battling i
 7. Action Phase -> Winner of initiative executes Attack, Defend, or Skill
 8. Round Evaluation -> Apply damage, update HP, and check for 0 HP
 9. Game Over -> Announce winner/loser and offer restart option
+
 
