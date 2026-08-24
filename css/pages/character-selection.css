@@ -1,4 +1,4 @@
-#characterSelection {
+#characterSelectionScreen {
     margin: 5px;
     display: flex;
     flex-direction: row;
@@ -7,24 +7,24 @@
     width: 800px;
 }
 
-#characterSelection .container {
+#characterSelectionScreen .infoPanel {
     padding: 10px;
     font-size: 15px;
-    text-align: left; 
+    text-align: left;
 }
 
-#charInfo {
+#characterInfo {
     width: 130px;
     margin: 0;
 }
 
-#charInfo img {
+#characterInfo img {
     width: 100%;
     height: 135px;
     border: 1px solid;
 }
 
-#charDescription {
+#characterDescription {
     margin: 0;
     border: 1px solid;
     text-align: center;
@@ -32,25 +32,25 @@
     height: 155px;
     overflow-y: scroll;
 }
-#charDescription p {
+#characterDescription p {
     text-align: justify;
     line-height: 1.5;
     margin: 0;
 }
 
-#attributes {
+#characterAttributes {
     width: 300px;
 }
 
-#stats .container {
+#characterStats .infoPanel {
     text-align: right;
 }
 
-#skills .container {
+#characterSkills .infoPanel {
     text-align: right;
 }
 
-#rosterDisplay {
+#rosterPanel {
     border: 1px solid;
     text-align: center;
     width: 340px;
@@ -58,7 +58,7 @@
     overflow-y: scroll;
 }
 
-#rosterDisplay h3 {
+#rosterPanel h3 {
     margin: 0;
     position: sticky;
     top: 0;
@@ -70,20 +70,20 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
-#roster .charImage {
+#roster .rosterCharacterImage {
     height: 90px;
     width: 100px;
     border: 1px solid;
     margin: 5.5px;
 }
 
-#actionButtons {
+#selectionActions {
     gap: 10px;
     display: flex;
     justify-content: flex-end;
     width: 99%;
 }
 
-#actionButtons .action {
+#selectionActions .actionButton {
     padding: 15px;
 }

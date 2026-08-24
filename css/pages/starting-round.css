@@ -1,0 +1,72 @@
+#startingRoundScreen {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 55px;
+}
+
+#versusContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.character-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+#player1Char,
+#player2Char {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    object-fit: cover;
+    background-color: #fff;
+}
+
+.player-name {
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+    margin: 0;
+    color: #666;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.character-name {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    color: #333;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#vsText {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#timerText {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin: 0;
+}

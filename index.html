@@ -4,85 +4,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/body.css">
-    <link rel="stylesheet" href="/css/pages/gameMenu.css">
-    <link rel="stylesheet" href="/css/pages/gameModes.css">
-    <link rel="stylesheet" href="/css/pages/characterSelection.css">
-    <link rel="stylesheet" href="/css/pages/combatTurn.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/pages/main-menu.css">
+    <link rel="stylesheet" href="/css/pages/game-modes.css">
+    <link rel="stylesheet" href="/css/pages/character-selection.css">
+    <link rel="stylesheet" href="/css/pages/turn-selection.css">
     <link rel="stylesheet" href="/css/pages/battlefield.css">
+    <link rel="stylesheet" href="/css/pages/starting-round.css">
     <title>RPG Multiverse</title>
 </head>
 
 <body>
-    <div id="gameMenuScreen">
+    <div id="fullscreenControls" style="position: fixed; top: 10px; right: 10px; z-index: 1000; display: flex; gap: 10px;">
+        <button onclick="document.documentElement.requestFullscreen()" style="padding: 8px 12px; cursor: pointer;">Enter Fullscreen</button>
+        <button onclick="document.exitFullscreen()" style="padding: 8px 12px; cursor: pointer;">Exit Fullscreen</button>
+    </div>
+
+    <div id="mainMenuScreen">
         <h1>RPG MULTIVERSE</h1>
-        <button id="playBtn">PLAY</button>
-        <div id="footer">
+        <button id="playButton">PLAY</button>
+        <div id="siteFooter">
             <a href="https://github.com/LomiGoo">
-                <img src="/images/github-logo.png" alt="Github Logo" style="width: 30px;">
+                <img src="/images/github-logo.png" alt="GitHub Logo" style="width: 30px;">
                 <span>@LomiGooTakes</span>
             </a>
             <p>Version: 0.1.0 Alpha</p>
         </div>
     </div>
 
-    <div id="gameModesScreen">
+    <div id="gameModeScreen">
         <h1>SELECT GAME MODE</h1>
-        <button id="pvcBtn" onclick="populateCharacters()">Player vs CPU</button>
-        <button id="pvpBtn">Player vs Player (Locked)</button>
-        <button id="backBtn">Back</button>
+        <button id="pvcButton">Player vs CPU</button>
+        <button id="pvpButton">Player vs Player (Locked)</button>
+        <button id="modeBackButton">Back</button>
     </div>
 
-    <div id="characterSelection">
-        <div id="charInfo">
-            <img src="" alt="">
-            <div class="container" id="charDescription">
+    <div id="characterSelectionScreen">
+        <div id="characterInfo">
+            <img src="" alt="Selected Character Portrait">
+            <div class="infoPanel" id="characterDescription">
                 <p></p>
             </div>
         </div>
 
-        <div id="attributes">
-            <div id="stats">
-                <div class="container" id="charName" style="font-weight: bold; text-align: center;">Joker</div>
+        <div id="characterAttributes">
+            <div id="characterStats">
+                <div class="infoPanel" id="characterName" style="font-weight: bold; text-align: center;">Joker</div>
                 <hr>
-                <div class="container" id="attackStat">Attack: ----</div>
-                <div class="container" id="defenseStat">Defense: ----</div>
+                <div class="infoPanel" id="attackValue">Attack: ----</div>
+                <div class="infoPanel" id="defenseValue">Defense: ----</div>
             </div>
             <hr>
 
-            <div id="skills">
-                <div class="container" id="firstSkill">1st Skill: ???</div>
-                <div class="container" id="secondSkill">2nd Skill: ???</div>
-                <div class="container" id="thirdSkill">3rd Skill: ???</div>
+            <div id="characterSkills">
+                <div class="infoPanel" id="firstSkill">1st Skill: ???</div>
+                <div class="infoPanel" id="secondSkill">2nd Skill: ???</div>
+                <div class="infoPanel" id="thirdSkill">3rd Skill: ???</div>
                 <hr>
-                <div class="container" id="ultimateSkill">???</div>
+                <div class="infoPanel" id="ultimateSkill">???</div>
             </div>
         </div>
 
-        <div id="rosterDisplay">
+        <div id="rosterPanel">
             <h3>SELECT YOUR CHARACTER</h3>
             <div id="roster">
                 
             </div>
         </div>
 
-        <div id="actionButtons">
-            <button class="action" id="backBtn2">Back</button>
-            <button class="action" id="nextBtn">Next</button>
+        <div id="selectionActions">
+            <button class="actionButton" id="selectionBackButton">Back</button>
+            <button class="actionButton" id="selectionNextButton">Next</button>
         </div>
     </div>
 
-    <div id="combatTurnScreen">
+    <div id="turnSelectionScreen">
         <h1>SELECT COMBAT TURN STYLE</h1>
-        <button id="rpsStyleBtn">Rock-Paper-Scissor (Blunt, Wrap, Cut)</button>
-        <button id="coinBetBtn">Coin Bet (Locked)</button>
-        <button id="backBtn3">Back</button>
+        <button id="rpsButton">Rock-Paper-Scissor (Blunt, Wrap, Cut)</button>
+        <button id="coinBetButton">Coin Bet (Locked)</button>
+        <button id="turnBackButton">Back</button>
     </div>
 
-    <div id="battlefield">
+    <div id="startingRoundScreen">
+        <div id="versusContainer">
+            <div class="character-container">
+                <img id="player1Char" src="images/question.png" alt="Player 1 Character">
+                <p class="player-name" id="player1Name">Player 1</p>
+                <p class="character-name" id="player1CharName">Joker</p>
+            </div>
+
+            <h2 id="vsText">VS</h2>
+
+            <div class="character-container">
+                <img id="player2Char" src="images/question.png" alt="Player 2 Character">
+                <p class="player-name" id="player2Name">Player 2</p>
+                <p class="character-name" id="player2CharName">Rimuru</p>
+            </div>
+        </div>
+
+        <p id="timerText">Starting in 5</p>
+    </div>
+
+    <div id="battlefieldScreen">
         <div id="topBar">
             <div id="player1">
-                <img id="playerChar1" src="https://i.pinimg.com/1200x/e0/72/62/e0726218a8cf69c05ad3d0304b278275.jpg" alt="player1 Image">
+                <img id="playerChar1" src="/images/roster/persona-5-joker.jpg" alt="Player 1 Character">
                 <div id="player1Info">
                     <p>User (Joker)</p>
                     <p>HP: ---- / ----</p>
@@ -96,16 +122,16 @@
                     <p>(Joker) User</p>
                     <p>---- / ---- : HP</p>
                 </div>
-                <img id="playerChar2" src="https://i.pinimg.com/1200x/e0/72/62/e0726218a8cf69c05ad3d0304b278275.jpg" alt="player2 Image">
+                <img id="playerChar2" src="/images/roster/persona-5-joker.jpg" alt="Player 2 Character">
             </div>
         </div>
         <hr>
 
         <div id="bottomBar">
             <div id="versusDisplay">
-                <img src="/images/question.png" alt="">
+                <img src="/images/question.png" alt="Unknown Character">
                 <p>VS</p>
-                <img src="/images/question.png" alt="">
+                <img src="/images/question.png" alt="Unknown Character">
             </div>
 
             <p>RESULT : PLAYER # WINS!</p>
@@ -114,13 +140,13 @@
             <div id="battleActions">
                 <div id="turnDecisions">
                     <button>
-                        <img src="/images/question.png" alt="">
+                        <img src="/images/question.png" alt="Turn Decision Option">
                     </button>
                     <button>
-                        <img src="/images/question.png" alt="">
+                        <img src="/images/question.png" alt="Turn Decision Option">
                     </button>
                     <button>
-                        <img src="/images/question.png" alt="">
+                        <img src="/images/question.png" alt="Turn Decision Option">
                     </button>
                 </div>
 
@@ -134,29 +160,15 @@
         </div>
     </div>
 
-    <--
-    <div id="fsPrompt" style="
-        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-        background: rgba(0,0,0,0.85); display: flex;
-        align-items: center; justify-content: center; z-index: 999;">
-        <div style="text-align: center; color: white;">
-            <p>Click to enter fullscreen</p>
-            <button id="fsBtn" style="padding: 10px 24px; font-size: 16px;">Enter</button>
-        </div>
-    </div>
-    -->
-    <script src="/js/ui/screenManager.js"></script>
-    <script src="/js/ui/gameMenu.js"></script>
-    <script src="/js/ui/gameModes.js"></script>
-    <script src="/js/ui/characterSelection.js"></script>
-    <script src="/js/data/characters.js"></script>
-    <script src="/js/ui/combatTurn.js"></script>
-    <script>
-        document.getElementById('fsBtn').addEventListener('click', () => {
-            document.documentElement.requestFullscreen()
-            document.getElementById('fsPrompt').remove()
-        })
-    </script>
+    <script src="/js/ui/screen-manager.js"></script>
+    <script src="/js/data/character.js"></script>
+    <script src="/js/data/player.js"></script>
+    <script src="/js/ui/main-menu.js"></script>
+    <script src="/js/ui/game-modes.js"></script>
+    <script src="/js/ui/character-selection.js"></script>
+    <script src="/js/ui/turn-selection.js"></script>
+    <script src="/js/ui/starting-round.js"></script>
+    <script src="/js/data/battle-info.js"></script>
 </body>
 
 </html>

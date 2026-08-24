@@ -1,24 +1,24 @@
-#gameMenuScreen {
+#mainMenuScreen {
     display: none;
     flex-direction: column;
     gap: 60px;
     align-items: center;
 }
 
-#gameMenuScreen button {
+#mainMenuScreen button {
     padding: 20px;
     font-size: 20px;
     width: 35%;
 }
 
-#gameMenuScreen a {
+#mainMenuScreen a {
     display: flex;
     align-items: center;
     gap: 5px;
     text-decoration: none;
 }
 
-#footer {
+#siteFooter {
     display: flex;
     gap: 500px;
     font-size: 15px;

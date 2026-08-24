@@ -1,88 +1,55 @@
-# Project : RPG Multiverse
+# Project: RPG Multiverse
 
 ## Goal
-PVE & PVP rpg turn-based gameplay website
+A turn-based RPG web game featuring characters from various universes battling in Player vs. CPU combat.
 
-----------------------
-## MosCoW (Priorities)
+---
 
-### Must Have
+## MVP Features
 
-- [x] UI
-    -[x] Game Menu Screen
+### Completed
+- [x] Main Menu Screen (Play button and fullscreen toggle)
+- [x] Game Mode Selection Screen (Player vs CPU mode)
+- [x] Character Selection Screen (Roster display, portraits, descriptions, stats)
+- [x] Turn Selection Screen (Combat turn style choice)
+- [x] Starting Round Screen (Versus matchup display and countdown timer)
+- [x] Character roster data (Joker, Rimuru, Regulus)
+- [x] Player data structures (Base HP 5000, Attack, Defense, Skills)
+- [x] CPU opponent randomizer
 
-- [x] Game Mode
-    -[x] Player vs CPU Battle
+### To Be Built
+- [ ] Battlefield Screen UI (Live HP display, character info, turn indicator)
+- [ ] Combat Turn System (Rock-Paper-Scissors initiative selection and tie rule)
+- [ ] Battle Actions (Attack, Defend, Skill buttons)
+- [ ] Skill Cooldown System (Tracking turns until skills can be used again)
+- [ ] Damage Calculation (Attack vs Defense formulas and damage reduction)
+- [ ] CPU Combat AI (Randomized RPS and action selection)
+- [ ] Game Over State (0 HP detection, winner/loser announcement, play again)
 
-- [] Character
-    -[] Character 
-    -[] Character Images
-    -[] Character Sounds
+---
 
-- [] Stats
-    -[] Attack Stats
-    -[] Defense Stats
+## Future Features
 
-- [] Combat Turn Styles
-    -[] Core Rock-Paper-Scissor Style (Blunt, Wrap, Cut) logic
-    -[] Tie rule: both receive fixed damage
+- [ ] Animated visual HP bar
+- [ ] Ultimate skill action and turn 6 unlock cooldown
+- [ ] Ultimate damage calculation and special effects
+- [ ] Coin Bet combat turn style
+- [ ] Sound effects and background music
+- [ ] Player vs Player (PvP) mode
+- [ ] User accounts and authentication
+- [ ] Progression system and leaderboards
 
-- [] Battle System
-    -[] HP text
+---
 
-- [] Actions
-    -[] Attack Action
-    -[] Defend Action
-    -[] Skill Action
+## Gameplay Loop
 
-- [] Cooldowns
-    -[] Skill Cooldown
+1. Main Menu -> Click Play
+2. Game Mode -> Select Player vs CPU
+3. Character Selection -> Pick a character (CPU randomly selected)
+4. Turn Style Selection -> Choose Rock-Paper-Scissors
+5. Starting Round -> Matchup preview and 4-second countdown
+6. Battlefield Initiative -> Player and CPU choose RPS option
+7. Action Phase -> Winner of initiative executes Attack, Defend, or Skill
+8. Round Evaluation -> Apply damage, update HP, and check for 0 HP
+9. Game Over -> Announce winner/loser and offer restart option
 
-- [] Damage Calculation
-    -[] Normal Attack
-    -[] Skill
-    -[] Defense Damage Calculation
-
-- [] Battle System
-    -[] Randomized CPU decisions/attacks
-    -[] Win / Lose Detection (0 HP = round loss)
-
-### Should Have
-
-### Could Have
-- [] Battle System
-    -[] HP bar
-
-- [] Audio/Visual
-    -[] Battle Music
-    -[] Attack/Skill Effects
-
-- [] Actions
-    -[] Ultimate Skill
-
-- [] Cooldowns
-    -[] Ultimate Cooldown — triggers turn 6, refreshes after use
-
-- [] Damage Calculation
-    -[] Ultimate
-
-- [] Combat Turn Styles
-    -[] Core Coin Bet logic
-    -[] Tie rule: both receive fixed damage
-    
-### Won't Have
-- [] Game Mode
-    -[] Player vs Player Battle
-
-- [] Accounts & Progression
-    -[] Accounts
-    -[] Leaderboard
-----------------------
-## Bullet Trace
-
-1. Show Play Button 
-2. Show Game Modes
-3. Show Character Selection
-4. Show Combat Turn Style
-5. Show BattleField
-6. Show Win / Lose Display
