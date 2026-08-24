@@ -1,7 +1,7 @@
 # Project: RPG Multiverse
 
 ## Goal
-A turn-based RPG web game featuring characters from various universes battling in Player vs. CPU combat.
+A turn-based RPG web game featuring characters from various universes
 
 ---
 
