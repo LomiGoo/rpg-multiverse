@@ -4,26 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/css/pages/main-menu.css">
-    <link rel="stylesheet" href="/css/pages/game-modes.css">
-    <link rel="stylesheet" href="/css/pages/character-selection.css">
-    <link rel="stylesheet" href="/css/pages/turn-selection.css">
-    <link rel="stylesheet" href="/css/pages/battlefield.css">
-    <link rel="stylesheet" href="/css/pages/starting-round.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/pages/main-menu.css">
+    <link rel="stylesheet" href="css/pages/game-modes.css">
+    <link rel="stylesheet" href="css/pages/character-selection.css">
+    <link rel="stylesheet" href="css/pages/turn-selection.css">
+    <link rel="stylesheet" href="css/pages/battlefield.css">
+    <link rel="stylesheet" href="css/pages/starting-round.css">
     <title>RPG Multiverse</title>
 </head>
 
 <body>
     <div id="assistive-touch-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999; user-select: none;">
-        <button id="assistive-touch-btn" aria-label="Toggle Fullscreen Menu" style="width: 44px; height: 44px; border-radius: 12px; background: rgba(30, 30, 30, 0.75); border: 2px solid rgba(255, 255, 255, 0.4); color: white; cursor: grab; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(8px); box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: transform 0.1s ease, background-color 0.2s ease;">
+        <button id="assistive-touch-btn" aria-label="Toggle Fullscreen Menu" style="width: 44px; height: 44px; border-radius: 12px; background: rgba(30, 30, 30, 0.75); border: 2px solid rgba(255, 255, 255, 0.3); cursor: pointer; display: flex; align-items: center; justify-content: center; color: #fff;">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
             </svg>
         </button>
-        <div id="assistive-touch-menu" style="display: none; position: absolute; top: 52px; right: 0; background: rgba(20, 20, 20, 0.9); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; padding: 6px; flex-direction: column; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); backdrop-filter: blur(10px); min-width: 140px;">
-            <button onclick="document.documentElement.requestFullscreen(); document.getElementById('assistive-touch-menu').style.display='none';" style="padding: 8px 12px; background: #2a2a2a; color: #fff; border: 1px solid #444; border-radius: 6px; cursor: pointer; text-align: left; font-size: 13px;">Enter Fullscreen</button>
-            <button onclick="if(document.fullscreenElement) document.exitFullscreen(); document.getElementById('assistive-touch-menu').style.display='none';" style="padding: 8px 12px; background: #2a2a2a; color: #fff; border: 1px solid #444; border-radius: 6px; cursor: pointer; text-align: left; font-size: 13px;">Exit Fullscreen</button>
+        <div id="assistive-touch-menu" style="display: none; position: absolute; top: 52px; right: 0; background: rgba(20, 20, 20, 0.9); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);">
+            <button onclick="document.documentElement.requestFullscreen(); document.getElementById('assistive-touch-menu').style.display='none';" style="padding: 8px 12px; background: #2a2a2a; color: #fff; border: none; cursor: pointer; width: 100%; text-align: left; font-size: 12px;">Fullscreen</button>
+            <button onclick="if(document.fullscreenElement) document.exitFullscreen(); document.getElementById('assistive-touch-menu').style.display='none';" style="padding: 8px 12px; background: #2a2a2a; color: #fff; border: none; cursor: pointer; width: 100%; text-align: left; font-size: 12px;">Exit Fullscreen</button>
         </div>
     </div>
 
@@ -32,7 +32,7 @@
         <button id="play-button">PLAY</button>
         <div id="site-footer">
             <a href="https://github.com/LomiGoo">
-                <img src="/images/github-logo.png" alt="GitHub Logo" style="width: 30px;">
+                <img src="images/github-logo.png" alt="GitHub Logo" style="width: 30px;">
                 <span>@LomiGooTakes</span>
             </a>
             <p>Version: 0.1.0 Alpha</p>
@@ -115,7 +115,7 @@
     <div id="battlefield-screen">
         <div id="top-bar">
             <div id="player-1">
-                <img class="player-character" src="/images/question.png" alt="Player 1 Character">
+                <img class="player-character" src="images/question.png" alt="Player 1 Character">
                 <div id="player-1-info">
                     <p class="player-name">User (Joker)</p>
                     <p class="health-status">HP: ---- / ----</p>
@@ -129,16 +129,16 @@
                     <p class="player-name">(Joker) User</p>
                     <p class="health-status">---- / ---- : HP</p>
                 </div>
-                <img class="player-character" src="/images/question.png" alt="Player 2 Character">
+                <img class="player-character" src="images/question.png" alt="Player 2 Character">
             </div>
         </div>
         <hr>
 
         <div id="bottom-bar">
             <div id="versus-display">
-                <img src="/images/question.png" alt="Unknown Character">
+                <img src="images/question.png" alt="Unknown Character">
                 <p>VS</p>
-                <img src="/images/question.png" alt="Unknown Character">
+                <img src="images/question.png" alt="Unknown Character">
             </div>
 
             <p>RESULT : ???</p>
@@ -147,13 +147,13 @@
             <div id="battle-actions">
                 <div id="turn-decisions">
                     <button>
-                        <img src="/images/combat-turn/blunt-wrap-cut/blunt.png" alt="Turn Decision Option">
+                        <img src="images/combat-turn/blunt-wrap-cut/blunt.png" alt="Turn Decision Option">
                     </button>
                     <button>
-                        <img src="/images/combat-turn/blunt-wrap-cut/wrap.png" alt="Turn Decision Option">
+                        <img src="images/combat-turn/blunt-wrap-cut/wrap.png" alt="Turn Decision Option">
                     </button>
                     <button>
-                        <img src="/images/combat-turn/blunt-wrap-cut/cut.png" alt="Turn Decision Option">
+                        <img src="images/combat-turn/blunt-wrap-cut/cut.png" alt="Turn Decision Option">
                     </button>
                 </div>
 
@@ -176,18 +176,18 @@
         </div>
     </div>
 
-    <script src="/js/ui/screen-manager.js"></script>
-    <script src="/js/data/character.js"></script>
-    <script src="/js/data/player.js"></script>
-    <script src="/js/ui/main-menu.js"></script>
-    <script src="/js/ui/game-modes.js"></script>
-    <script src="/js/ui/character-selection.js"></script>
-    <script src="/js/ui/turn-selection.js"></script>
-    <script src="/js/ui/starting-round.js"></script>
-    <script src="/js/data/battle-info.js"></script>
-    <script src="/js/data/player.js"></script>
-    <script src="/js/ui/battlefield.js"></script>
-    <script src="/js/ui/floating-controls.js"></script>
+    <script src="js/ui/screen-manager.js"></script>
+    <script src="js/data/character.js"></script>
+    <script src="js/data/player.js"></script>
+    <script src="js/ui/main-menu.js"></script>
+    <script src="js/ui/game-modes.js"></script>
+    <script src="js/ui/character-selection.js"></script>
+    <script src="js/ui/turn-selection.js"></script>
+    <script src="js/ui/starting-round.js"></script>
+    <script src="js/data/battle-info.js"></script>
+    <script src="js/data/player.js"></script>
+    <script src="js/ui/battlefield.js"></script>
+    <script src="js/ui/floating-controls.js"></script>
 </body>
 
 </html>
