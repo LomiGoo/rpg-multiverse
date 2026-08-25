@@ -1,6 +1,6 @@
 #character-selection-screen {
     margin: 5px;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     gap: 10px;
     width: 800px;
