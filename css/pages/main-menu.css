@@ -1,5 +1,5 @@
 #main-menu-screen {
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 60px;
     align-items: center;
