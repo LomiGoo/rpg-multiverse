@@ -1,6 +1,6 @@
-const playButton = document.getElementById('playButton')
+const playButton = document.getElementById('play-button')
 
 playButton.addEventListener('click', () => {
     enterFullscreen()
-    switchScreen('mainMenuScreen', 'gameModeScreen')
+    switchScreen('main-menu-screen', 'game-mode-screen')
 })

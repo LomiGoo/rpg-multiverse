@@ -1,6 +1,6 @@
 function timerStart() {
     let time = 4
-    const timerText = document.getElementById('timerText')
+    const timerText = document.getElementById('timer-text')
 
     const timer = setInterval(() => {
         timerText.textContent = 'Starting in ' + time
@@ -9,16 +9,17 @@ function timerStart() {
         
         if (time < 0) {
             clearInterval(timer)
-            switchScreen('startingRoundScreen', 'battlefieldScreen')
+            renderBattlefield()
+            switchScreen('starting-round-screen', 'battlefield-screen')
         }
     }, 1000)
 }
 
 function renderStartingRound() {
-    const player1Image = document.querySelector('.character-container #player1Char')
-    const player1CharName = document.querySelector('.character-container #player1CharName')
-    const player2Image = document.querySelector('.character-container #player2Char')
-    const player2CharName = document.querySelector('.character-container #player2CharName')
+    const player1Image = document.querySelector('.character-container #player-1-char')
+    const player1CharName = document.querySelector('.character-container #player-1-char-name')
+    const player2Image = document.querySelector('.character-container #player-2-char')
+    const player2CharName = document.querySelector('.character-container #player-2-char-name')
 
     player1Image.src = players[0].imageUrl
     player1CharName.textContent = players[0].name

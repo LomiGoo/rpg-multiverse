@@ -1,38 +1,38 @@
 # Project: RPG Multiverse
 
 ## Goal
-A turn-based RPG web game featuring characters from various universes
+A turn-based RPG web game featuring characters from various universes featuring PvC & PvP
 
 ---
 
 ## MVP Features
 
 ### UI
-- [x] Main Menu Screen (Play button and fullscreen toggle)
+- [x] Main Menu Screen 
 - [x] Game Mode Selection Screen
-- [x] Character Selection Screen (Roster display, portraits, descriptions, stats)
-- [x] Turn Selection Screen (Combat turn style choice)
-- [x] Starting Round Screen (Versus matchup display and countdown timer)
-- [ ] Battlefield Screen (Live HP text display, character portraits, turn indicator)
-- [ ] Game Over Banner (Winner and loser announcement, play again button)
+- [x] Character Selection Screen 
+- [x] Turn Selection Screen 
+- [x] Starting Round Screen
+- [ ] Battlefield Screen 
+- [ ] Game Over Banner 
 
 ### Logic
 - [x] Screen switching and navigation management
 - [x] Fullscreen enter and exit controls
 - [x] CPU opponent randomizer on character selection
 - [x] Starting round countdown timer
-- [ ] Rock-Paper-Scissors turn initiative resolution and tie rule
-- [ ] Combat action handling (Attack, Defend, Skill buttons)
-- [ ] Damage calculations (Attack vs Defense formulas and damage reduction)
-- [ ] Skill cooldown management (Track turns until usable again)
-- [ ] CPU combat decision making (Randomized RPS and action selection)
-- [ ] Game state and Win/Lose detection (0 HP check)
+- [ ] Blunt-Wrap-Cut turn initiative resolution and tie rule
+- [ ] Combat action handling 
+- [ ] Damage calculations 
+- [ ] Skill cooldown management
+- [ ] CPU combat decision making 
+- [ ] Game state and Win/Lose detection
 
 ### Data
-- [x] Character roster dataset (Joker, Rimuru, Regulus stats and skills)
-- [x] Player state models (Base HP 5000, Attack, Defense, Skill definitions)
-- [x] Game mode state tracking (Player vs CPU)
-- [ ] Live combat state (Current HP, active turn, turn count, cooldown counters)
+- [x] Character roster dataset
+- [x] Player state models 
+- [x] Game mode state tracking 
+- [ ] Live combat state 
 
 ---
 
@@ -60,9 +60,9 @@ A turn-based RPG web game featuring characters from various universes
 1. Main Menu -> Click Play
 2. Game Mode -> Select Player vs CPU
 3. Character Selection -> Pick a character (CPU randomly selected)
-4. Turn Style Selection -> Choose Rock-Paper-Scissors
+4. Turn Style Selection -> Choose Blunt-Wrap-Cut
 5. Starting Round -> Matchup preview and 4-second countdown
-6. Battlefield Initiative -> Player and CPU choose RPS option
+6. Battlefield Initiative -> Player and CPU choose a Blunt, Wrap, or Cut option
 7. Action Phase -> Winner of initiative executes Attack, Defend, or Skill
 8. Round Evaluation -> Apply damage, update HP, and check for 0 HP
 9. Game Over -> Announce winner/loser and offer restart option

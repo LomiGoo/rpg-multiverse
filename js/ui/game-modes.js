@@ -1,9 +1,9 @@
-const modeBackButton = document.getElementById('modeBackButton')
-const pvcButton = document.getElementById('pvcButton')
+const modeBackButton = document.getElementById('mode-back-button')
+const pvcButton = document.getElementById('pvc-button')
 
 modeBackButton.addEventListener('click', () => {
     exitFullscreen()
-    switchScreen('gameModeScreen', 'mainMenuScreen')
+    switchScreen('game-mode-screen', 'main-menu-screen')
 })
 
 pvcButton.addEventListener('click', () => {
@@ -13,5 +13,5 @@ pvcButton.addEventListener('click', () => {
     renderSelectedCharacter(character)
 
     gameMode = 'pvc'
-    switchScreen('gameModeScreen', 'characterSelectionScreen')
+    switchScreen('game-mode-screen', 'character-selection-screen')
 })

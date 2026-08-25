@@ -1,12 +1,12 @@
-const turnBackButton = document.getElementById('turnBackButton')
-const rpsButton = document.getElementById('rpsButton')
+const turnBackButton = document.getElementById('turn-back-button')
+const rpsButton = document.getElementById('rps-button')
 
 turnBackButton.addEventListener('click', () => {
-    switchScreen('turnSelectionScreen', 'characterSelectionScreen')
+    switchScreen('turn-selection-screen', 'character-selection-screen')
 })
 
 rpsButton.addEventListener('click', () => {
     renderStartingRound()
     timerStart()
-    switchScreen('turnSelectionScreen', 'startingRoundScreen')
+    switchScreen('turn-selection-screen', 'starting-round-screen')
 })

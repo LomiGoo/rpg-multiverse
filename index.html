@@ -15,15 +15,22 @@
 </head>
 
 <body>
-    <div id="fullscreenControls" style="position: fixed; top: 10px; right: 10px; z-index: 1000; display: flex; gap: 10px;">
-        <button onclick="document.documentElement.requestFullscreen()" style="padding: 8px 12px; cursor: pointer;">Enter Fullscreen</button>
-        <button onclick="document.exitFullscreen()" style="padding: 8px 12px; cursor: pointer;">Exit Fullscreen</button>
+    <div id="assistive-touch-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999; user-select: none;">
+        <button id="assistive-touch-btn" aria-label="Toggle Fullscreen Menu" style="width: 44px; height: 44px; border-radius: 12px; background: rgba(30, 30, 30, 0.75); border: 2px solid rgba(255, 255, 255, 0.4); color: white; cursor: grab; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(8px); box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: transform 0.1s ease, background-color 0.2s ease;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+            </svg>
+        </button>
+        <div id="assistive-touch-menu" style="display: none; position: absolute; top: 52px; right: 0; background: rgba(20, 20, 20, 0.9); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; padding: 6px; flex-direction: column; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); backdrop-filter: blur(10px); min-width: 140px;">
+            <button onclick="document.documentElement.requestFullscreen(); document.getElementById('assistive-touch-menu').style.display='none';" style="padding: 8px 12px; background: #2a2a2a; color: #fff; border: 1px solid #444; border-radius: 6px; cursor: pointer; text-align: left; font-size: 13px;">Enter Fullscreen</button>
+            <button onclick="if(document.fullscreenElement) document.exitFullscreen(); document.getElementById('assistive-touch-menu').style.display='none';" style="padding: 8px 12px; background: #2a2a2a; color: #fff; border: 1px solid #444; border-radius: 6px; cursor: pointer; text-align: left; font-size: 13px;">Exit Fullscreen</button>
+        </div>
     </div>
 
-    <div id="mainMenuScreen">
+    <div id="main-menu-screen">
         <h1>RPG MULTIVERSE</h1>
-        <button id="playButton">PLAY</button>
-        <div id="siteFooter">
+        <button id="play-button">PLAY</button>
+        <div id="site-footer">
             <a href="https://github.com/LomiGoo">
                 <img src="/images/github-logo.png" alt="GitHub Logo" style="width: 30px;">
                 <span>@LomiGooTakes</span>
@@ -31,130 +38,139 @@
             <p>Version: 0.1.0 Alpha</p>
         </div>
     </div>
-
-    <div id="gameModeScreen">
+    
+    <div id="game-mode-screen">
         <h1>SELECT GAME MODE</h1>
-        <button id="pvcButton">Player vs CPU</button>
-        <button id="pvpButton">Player vs Player (Locked)</button>
-        <button id="modeBackButton">Back</button>
+        <button id="pvc-button">Player vs CPU</button>
+        <button id="pvp-button">Player vs Player (Locked)</button>
+        <button id="mode-back-button">Back</button>
     </div>
 
-    <div id="characterSelectionScreen">
-        <div id="characterInfo">
+    <div id="character-selection-screen">
+        <div id="character-info">
             <img src="" alt="Selected Character Portrait">
-            <div class="infoPanel" id="characterDescription">
+            <div class="info-panel" id="character-description">
                 <p></p>
             </div>
         </div>
 
-        <div id="characterAttributes">
-            <div id="characterStats">
-                <div class="infoPanel" id="characterName" style="font-weight: bold; text-align: center;">Joker</div>
+        <div id="character-attributes">
+            <div id="character-stats">
+                <div class="info-panel" id="character-name" style="font-weight: bold; text-align: center;">Joker</div>
                 <hr>
-                <div class="infoPanel" id="attackValue">Attack: ----</div>
-                <div class="infoPanel" id="defenseValue">Defense: ----</div>
+                <div class="info-panel" id="attack-value">Attack: ----</div>
+                <div class="info-panel" id="defense-value">Defense: ----</div>
             </div>
             <hr>
 
-            <div id="characterSkills">
-                <div class="infoPanel" id="firstSkill">1st Skill: ???</div>
-                <div class="infoPanel" id="secondSkill">2nd Skill: ???</div>
-                <div class="infoPanel" id="thirdSkill">3rd Skill: ???</div>
+            <div id="character-skills">
+                <div class="info-panel" id="first-skill">1st Skill: ???</div>
+                <div class="info-panel" id="second-skill">2nd Skill: ???</div>
+                <div class="info-panel" id="third-skill">3rd Skill: ???</div>
                 <hr>
-                <div class="infoPanel" id="ultimateSkill">???</div>
+                <div class="info-panel" id="ultimate-skill">???</div>
             </div>
         </div>
 
-        <div id="rosterPanel">
+        <div id="roster-panel">
             <h3>SELECT YOUR CHARACTER</h3>
             <div id="roster">
                 
             </div>
         </div>
 
-        <div id="selectionActions">
-            <button class="actionButton" id="selectionBackButton">Back</button>
-            <button class="actionButton" id="selectionNextButton">Next</button>
+        <div id="selection-actions">
+            <button class="action-button" id="selection-back-button">Back</button>
+            <button class="action-button" id="selection-next-button">Next</button>
         </div>
     </div>
 
-    <div id="turnSelectionScreen">
+    <div id="turn-selection-screen">
         <h1>SELECT COMBAT TURN STYLE</h1>
-        <button id="rpsButton">Rock-Paper-Scissor (Blunt, Wrap, Cut)</button>
-        <button id="coinBetButton">Coin Bet (Locked)</button>
-        <button id="turnBackButton">Back</button>
+        <button id="rps-button">Blunt-Wrap-Cut</button>
+        <button id="coin-bet-button">Coin Bet (Locked)</button>
+        <button id="turn-back-button">Back</button>
     </div>
 
-    <div id="startingRoundScreen">
-        <div id="versusContainer">
+    <div id="starting-round-screen">
+        <div id="versus-container">
             <div class="character-container">
-                <img id="player1Char" src="images/question.png" alt="Player 1 Character">
-                <p class="player-name" id="player1Name">Player 1</p>
-                <p class="character-name" id="player1CharName">Joker</p>
+                <img id="player-1-char" src="images/question.png" alt="Player 1 Character">
+                <p class="player-name" id="player-1-name">Player 1</p>
+                <p class="character-name" id="player-1-char-name">Joker</p>
             </div>
 
-            <h2 id="vsText">VS</h2>
+            <h2 id="vs-text">VS</h2>
 
             <div class="character-container">
-                <img id="player2Char" src="images/question.png" alt="Player 2 Character">
-                <p class="player-name" id="player2Name">Player 2</p>
-                <p class="character-name" id="player2CharName">Rimuru</p>
+                <img id="player-2-char" src="images/question.png" alt="Player 2 Character">
+                <p class="player-name" id="player-2-name">Player 2</p>
+                <p class="character-name" id="player-2-char-name">Rimuru</p>
             </div>
         </div>
 
-        <p id="timerText">Starting in 5</p>
+        <p id="timer-text">Starting in 5</p>
     </div>
 
-    <div id="battlefieldScreen">
-        <div id="topBar">
-            <div id="player1">
-                <img id="playerChar1" src="/images/roster/persona-5-joker.jpg" alt="Player 1 Character">
-                <div id="player1Info">
-                    <p>User (Joker)</p>
-                    <p>HP: ---- / ----</p>
+    <div id="battlefield-screen">
+        <div id="top-bar">
+            <div id="player-1">
+                <img class="player-character" src="/images/question.png" alt="Player 1 Character">
+                <div id="player-1-info">
+                    <p class="player-name">User (Joker)</p>
+                    <p class="health-status">HP: ---- / ----</p>
                 </div>
             </div>
 
-            <p id="playerTurn">PLAYER # TURN</p>
+            <p id="player-turn">PLAYER ? TURN</p>
 
-            <div id="player2">
-                <div id="player2Info">
-                    <p>(Joker) User</p>
-                    <p>---- / ---- : HP</p>
+            <div id="player-2">
+                <div id="player-2-info">
+                    <p class="player-name">(Joker) User</p>
+                    <p class="health-status">---- / ---- : HP</p>
                 </div>
-                <img id="playerChar2" src="/images/roster/persona-5-joker.jpg" alt="Player 2 Character">
+                <img class="player-character" src="/images/question.png" alt="Player 2 Character">
             </div>
         </div>
         <hr>
 
-        <div id="bottomBar">
-            <div id="versusDisplay">
+        <div id="bottom-bar">
+            <div id="versus-display">
                 <img src="/images/question.png" alt="Unknown Character">
                 <p>VS</p>
                 <img src="/images/question.png" alt="Unknown Character">
             </div>
 
-            <p>RESULT : PLAYER # WINS!</p>
+            <p>RESULT : ???</p>
             <hr>
 
-            <div id="battleActions">
-                <div id="turnDecisions">
+            <div id="battle-actions">
+                <div id="turn-decisions">
                     <button>
-                        <img src="/images/question.png" alt="Turn Decision Option">
+                        <img src="/images/combat-turn/blunt-wrap-cut/blunt.png" alt="Turn Decision Option">
                     </button>
                     <button>
-                        <img src="/images/question.png" alt="Turn Decision Option">
+                        <img src="/images/combat-turn/blunt-wrap-cut/wrap.png" alt="Turn Decision Option">
                     </button>
                     <button>
-                        <img src="/images/question.png" alt="Turn Decision Option">
+                        <img src="/images/combat-turn/blunt-wrap-cut/cut.png" alt="Turn Decision Option">
                     </button>
                 </div>
 
-                <div id="battleDecisions">
-                    <button>ATTACK</button>
-                    <button>DEFEND</button>
-                    <button>SKILLS</button>
-                    <button>ULTIMATE</button>
+                <div id="battle-decisions">
+                    <div id="decision-menu">
+                        <button>Attack</button>
+                        <button>Defend</button>
+                        <button id="skills-button">Skills</button>
+                        <button id="ultimate-skill">ULTIMATE : ???</button>
+                    </div>
+        
+                    <div id="skills">
+                        <button id="return-button">Return</button>
+                        <button class="skill">???</button>
+                        <button class="skill">???</button>
+                        <button class="skill">???</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -169,6 +185,9 @@
     <script src="/js/ui/turn-selection.js"></script>
     <script src="/js/ui/starting-round.js"></script>
     <script src="/js/data/battle-info.js"></script>
+    <script src="/js/data/player.js"></script>
+    <script src="/js/ui/battlefield.js"></script>
+    <script src="/js/ui/floating-controls.js"></script>
 </body>
 
 </html>

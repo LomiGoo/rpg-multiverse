@@ -1,15 +1,15 @@
-#turnSelectionScreen {
+#turn-selection-screen {
     display: none;
     flex-direction: column;
     gap: 20px;
 }
 
-#turnSelectionScreen button {
+#turn-selection-screen button {
     font-size: 20px;
     padding: 10px;
 }
 
-#coinBetButton {
+#coin-bet-button {
     pointer-events: none;
     opacity: 0.5;
     cursor: not-allowed;

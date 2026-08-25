@@ -1,9 +1,9 @@
-document.getElementById('selectionBackButton').addEventListener('click', () => {
-    switchScreen('characterSelectionScreen', 'gameModeScreen')
+document.getElementById('selection-back-button').addEventListener('click', () => {
+    switchScreen('character-selection-screen', 'game-mode-screen')
 })
 
-document.getElementById('selectionNextButton').addEventListener('click', () => {
-    switchScreen('characterSelectionScreen', 'turnSelectionScreen')
+document.getElementById('selection-next-button').addEventListener('click', () => {
+    switchScreen('character-selection-screen', 'turn-selection-screen')
 })
 
 function populateCharacters() {
@@ -14,7 +14,7 @@ function populateCharacters() {
          
         const rosterImage = document.createElement('img')
 
-        rosterImage.classList.add('rosterCharacterImage')
+        rosterImage.classList.add('roster-character-image')
 
         rosterImage.src = character.imageUrl
         rosterImage.alt = character.imageAlt
@@ -28,16 +28,16 @@ function populateCharacters() {
 }
 
 function renderSelectedCharacter(character) {
-    const characterImage = document.querySelector('#characterInfo img')
-    const descriptionPanel = document.getElementById('characterDescription')
-    const descriptionText = document.querySelector('#characterDescription p')
-    const characterName = document.getElementById('characterName')
-    const attackValue = document.getElementById('attackValue')
-    const defenseValue = document.getElementById('defenseValue')
-    const firstSkill = document.getElementById('firstSkill')
-    const secondSkill = document.getElementById('secondSkill')
-    const thirdSkill = document.getElementById('thirdSkill')
-    const ultimateSkill = document.getElementById('ultimateSkill')
+    const characterImage = document.querySelector('#character-info img')
+    const descriptionPanel = document.getElementById('character-description')
+    const descriptionText = document.querySelector('#character-description p')
+    const characterName = document.getElementById('character-name')
+    const attackValue = document.getElementById('attack-value')
+    const defenseValue = document.getElementById('defense-value')
+    const firstSkill = document.getElementById('first-skill')
+    const secondSkill = document.getElementById('second-skill')
+    const thirdSkill = document.getElementById('third-skill')
+    const ultimateSkill = document.getElementById('ultimate-skill')
 
     characterImage.src = character.imageUrl
     characterImage.alt = character.imageAlt
@@ -46,9 +46,9 @@ function renderSelectedCharacter(character) {
     characterName.textContent = character.name
     attackValue.textContent = 'Attack: ' + character.attack
     defenseValue.textContent = 'Defense: ' + character.defense
-    firstSkill.textContent = '1st Skill: ' + character.skillOne
-    secondSkill.textContent = '2nd Skill: ' + character.skillTwo
-    thirdSkill.textContent = '3rd Skill: ' + character.skillThree
+    firstSkill.textContent = '1st Skill: ' + character.skills[0]
+    secondSkill.textContent = '2nd Skill: ' + character.skills[1]
+    thirdSkill.textContent = '3rd Skill: ' + character.skills[2]
     ultimateSkill.textContent = 'Ultimate: ' + character.ultimateSkill
     
     if (gameMode === 'pvc') {

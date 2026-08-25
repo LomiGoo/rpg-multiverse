@@ -1,15 +1,15 @@
-#gameModeScreen {
+#game-mode-screen {
     display: none;
     flex-direction: column;
     gap: 20px;
 }
 
-#gameModeScreen button {
+#game-mode-screen button {
     font-size: 20px;
     padding: 10px;
 }
 
-#pvpButton {
+#pvp-button {
     pointer-events: none;
     opacity: 0.5;
     cursor: not-allowed;

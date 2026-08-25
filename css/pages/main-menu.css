@@ -1,26 +1,25 @@
-#mainMenuScreen {
+#main-menu-screen {
     display: none;
     flex-direction: column;
     gap: 60px;
     align-items: center;
 }
 
-#mainMenuScreen button {
+#main-menu-screen button {
     padding: 20px;
     font-size: 20px;
     width: 35%;
 }
 
-#mainMenuScreen a {
+#main-menu-screen a {
     display: flex;
     align-items: center;
     gap: 5px;
     text-decoration: none;
 }
 
-#siteFooter {
+#site-footer {
     display: flex;
     gap: 500px;
     font-size: 15px;
 }
-

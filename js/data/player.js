@@ -5,9 +5,7 @@ const players = [
         hp: 5000,
         attack: null,
         defense: null,
-        skillOne: null,
-        skillTwo: null,
-        skillThree: null,
+        skills: [null, null, null],
         ultimateSkill: null,
         imageUrl: null
     },
@@ -17,9 +15,7 @@ const players = [
         hp: 5000,
         attack: null,
         defense: null,
-        skillOne: null,
-        skillTwo: null,
-        skillThree: null,
+        skills: [null, null, null],
         ultimateSkill: null,
         imageUrl: null
     }
@@ -33,9 +29,9 @@ function selectCharacter(player1, player2) {
         players[i].name = chosenCharacter[i].name
         players[i].attack = chosenCharacter[i].attack
         players[i].defense = chosenCharacter[i].defense
-        players[i].skillOne = chosenCharacter[i].skillOne
-        players[i].skillTwo = chosenCharacter[i].skillTwo
-        players[i].skillThree = chosenCharacter[i].skillThree
+        players[i].skills[0] = chosenCharacter[i].skills[0]
+        players[i].skills[1] = chosenCharacter[i].skills[1]
+        players[i].skills[2] = chosenCharacter[i].skills[2]
         players[i].ultimateSkill = chosenCharacter[i].ultimateSkill
         players[i].imageUrl = chosenCharacter[i].imageUrl
     }
