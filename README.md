@@ -2,10 +2,6 @@
 
 A dynamic RPG project built with HTML, CSS, and JavaScript.
 
-## Play Now
-
-👉 **[Launch the Game](https://lomigoo.github.io/rpg-multiverse/)**
-
 ## Project Structure
 
 ```
@@ -22,7 +18,7 @@ rpg-multiverse/
 ## Getting Started
 
 1. Clone the repository
-2. Open `index.html` in your browser, or visit the link above to play online
+2. Open `index.html` in your browser
 3. Explore the RPG Multiverse!
 
 ---
