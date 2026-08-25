@@ -2,7 +2,7 @@
 
 an RPG turn-based Game Web where it includes Anime and Game Characters from around the Universes.
 
-Live demo: https://lomigoo.github.io/rpg-multiverse/
+Live demo (Landscape Your Device): https://lomigoo.github.io/rpg-multiverse/
 
 ## Project Structure
 
