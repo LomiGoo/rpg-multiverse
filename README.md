@@ -4,7 +4,7 @@ A dynamic RPG project built with HTML, CSS, and JavaScript.
 
 ## Play Now
 
-👉 **[Launch the Game](https://lomigoo.github.io/rpg-multiverse/)**
+👉 **[Launch the Game](https://lomigoo.github.io/rpg-multiverse/index.html)**
 
 ## Project Structure
 
