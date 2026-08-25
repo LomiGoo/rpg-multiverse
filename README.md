@@ -1,6 +1,8 @@
 # RPG Multiverse
 
-A dynamic RPG project built with HTML, CSS, and JavaScript.
+an RPG turn-based Game Web where it includes Anime and Game Characters from around the Universes.
+
+Live demo: https://lomigoo.github.io/rpg-multiverse/
 
 ## Project Structure
 
